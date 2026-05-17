@@ -1,3 +1,13 @@
+---
+title: Git Submodule 命令
+published: 2026-05-17
+description: Git Submodule 常用命令与配置详解，包括添加、克隆、更新、删除等操作及配置文件说明。
+tags: [Git, Submodule, 版本控制]
+category: 开发工具
+slug: git-submodule-commands
+draft: false
+---
+
 # Git Submodule 命令
 
 ​`git submodule`是用于在一个仓库中嵌套管理另一个独立 Git 仓库的工具。主仓库仅记录子模块所处的具体提交（commit），而不直接追踪子模块中的文件内容。
