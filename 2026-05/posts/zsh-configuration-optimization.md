@@ -1,14 +1,12 @@
 ---
 title: Zsh 配置与优化
 published: 2026-05-15
-description: 详细的Zsh终端配置指南，包括安装、基本设置、插件管理器Zinit的使用，以及各种优化配置。
+description: Zsh 终端配置指南，包括安装、基本设置、插件管理器 Zinit 的使用，以及各种优化配置。
 tags: [Zsh, 终端, Shell配置, Linux]
 category: 系统配置
 slug: zsh-configuration-optimization
 draft: false
 ---
-
-# Zsh 配置与优化
 
 ## 1 安装
 
