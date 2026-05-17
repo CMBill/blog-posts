@@ -1,0 +1,17 @@
+name: 触发子模块更新
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 触发 CMBill.github.io 的 update-submodules.yml
+        run: |
+          gh workflow run update-submodules.yml \
+            --repo CMBill/CMBill.github.io \
+            --ref master
+        env:
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
