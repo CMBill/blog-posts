@@ -2,7 +2,7 @@
 title: 常用的 colcon build 参数
 published: 2026-05-17
 description: colcon build 是 ROS 2 中用来构建工作空间的核心命令，本文按用途分类介绍最常用的参数。
-tags: [ROS 2, colcon, 构建工具]
+tags: [ROS 2, colcon, 构建工具, AIGC]
 category: 开发工具
 slug: colcon-build-parameters
 draft: false
