@@ -52,7 +52,7 @@ draft: false
 | `published`    | 文章发布日期。必填。                                                                                                                                              |
 | `updated`      | 文章更新日期。                                                                                                                                                    |
 | `pinned`       | 是否将此文章置顶在文章列表顶部。                                                                                                                                  |
-| `description`  | 文章的简短描述。显示在首页上。必填。                                                                                                                              |
+| `description`  | 文章的简短描述，显示在首页上。必填。                                                                                                                              |
 | `image`        | 文章封面图片路径。<br/>1. 以 `http://` 或 `https://` 开头：使用网络图片<br/>2. 以 `/` 开头：`public` 目录中的图片<br/>3. 不带任何前缀：相对于 markdown 文件的路径 |
 | `tags`         | 文章标签，使用 YAML 数组。必填。                                                                                                                                  |
 | `category`     | 文章分类。必填。                                                                                                                                                  |
