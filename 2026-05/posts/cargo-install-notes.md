@@ -77,7 +77,7 @@ cargo install --locked ripgrep
 首先，通过 `cargo install`​ 安装 `cargo-binstall` 自身（这一步仍需编译，但只需一次）：
 
 ```bash
-cargo install cargo-binstall
+cargo install cargo-binstall --locked
 ```
 
 之后，即可使用 `cargo binstall` 安装其他工具：
