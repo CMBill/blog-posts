@@ -17,7 +17,7 @@ draft: false
   ```
 - ​**安装特定版本**：  
 
-  ```
+  ```bash
   cargo install ripgrep@13.0.0
   ```
 - ​**从 Git 仓库安装**：  
@@ -32,7 +32,7 @@ draft: false
   ```
 - ​**卸载一个工具**：  
 
-  ```
+  ```bash
   cargo uninstall ripgrep
   ```
 
@@ -107,7 +107,7 @@ cargo binstall tokei@12.1.0   # 指定版本
 
 bash
 
-```
+```bash
 cargo install cargo-update
 ```
 
@@ -115,7 +115,7 @@ cargo install cargo-update
 
 bash
 
-```
+```bash
 cargo install-update -a
 ```
 
@@ -125,7 +125,7 @@ cargo install-update -a
 
 bash
 
-```
+```bash
 cargo install-update ripgrep fd-find
 ```
 
