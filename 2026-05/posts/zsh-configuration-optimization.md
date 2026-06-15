@@ -1,6 +1,7 @@
 ---
 title: Zsh 配置与优化
 published: 2026-05-15
+updated: 2026-06-15
 description: Zsh 终端配置指南，包括安装、基本设置、插件管理器 Zinit 的使用，以及各种优化配置。
 tags: [Zsh, 终端, Shell配置, Linux]
 category: 系统配置
@@ -128,7 +129,7 @@ alias grep='grep --color=auto'
 - ​`zsh-users/zsh-completions`：提供额外的补全定义。
 - ​`zsh-users/zsh-autosuggestions`​：根据历史记录实时建议命令（按 `→` 补全）。
 - ​`zdharma-continuum/fast-syntax-highlighting`​：高性能语法高亮，类似于`zsh-syntax-highlighting`。
-- ​`agkozak/zsh-z`​：智能目录跳转，根据访问频率快速切换到常用目录，类似于`autojump`。
+- ~~​`agkozak/zsh-z`​：智能目录跳转，根据访问频率快速切换到常用目录，类似于`autojump`。~~ 使用 [ajeetdsouza/zoxide](https://github.com/ajeetdsouza/zoxide) 替代。
 
 ### 3.7 提示符 Starship
 
