@@ -83,8 +83,8 @@ npm i -g @openchamber/web
 
 安装完成后，在终端中运行 `openchamber`，随后打开其输出的地址（通常为 `http://127.0.0.1:3000/`）即可进入 OpenChamber 的主界面。
 
-![image](../assets/image-20260615164504-5uqxboj.png)
+![命令行启动 openchamber](../assets/image-20260615164504-5uqxboj.png)
 
 进入主界面后，可以在设置中将语言切换为中文。
 
-![image](../assets/image-20260615164622-ihpms46.png)
+![openchamber 主界面](../assets/image-20260615164622-ihpms46.png)
