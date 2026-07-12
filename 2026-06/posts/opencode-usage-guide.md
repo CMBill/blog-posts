@@ -49,7 +49,7 @@ npm -v # Should print "11.13.0".
 
 #### Windows 安装 Node
 
-对于 Windows，在[下载 Node.js](https://nodejs.org/zh-cn/download)页面下方找到"或者获得适用于 Windows x64 平台的 Node.js 构建"，点击下载 Windows 安装程序 (.msi) 安装即可。
+对于 Windows，在[下载 Node.js](https://nodejs.org/zh-cn/download)页面下方找到“或者获得适用于 Windows x64 平台的 Node.js 构建”，点击下载 Windows 安装程序 (.msi) 安装即可。
 
 #### 安装 OpenCode
 
