@@ -2,7 +2,7 @@
 title: 在 Ubuntu 上使用 Git Credential Manager（GCM）实现认证
 published: 2026-08-05
 description: 在 Ubuntu 上从 GitHub Release 下载安装 Git Credential Manager（GCM），配置其使用 Seahorse（GNOME Keyring）作为凭证存储后端，实现访问私有仓库时通过浏览器完成登录认证。
-tags: [Git, GCM, Ubuntu, 凭证管理, Linux]
+tags: [Git, GCM, Ubuntu, 凭证管理, Linux, AIGC]
 category: 系统配置
 slug: gcm-on-ubuntu
 draft: false

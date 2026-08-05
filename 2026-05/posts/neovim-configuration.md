@@ -8,22 +8,22 @@ slug: neovim-configuration
 draft: false
 ---
 
-使用 Vim 的分支 [Neovim](https://neovim.io/)，与 Vim 不同，Neovim 的用户配置文件位于`$XDG_CONFIG_HOME/nvim/`​（默认是`~/.config/nvim/`​），全局配置文件（默认不存在）位于`$XDG_CONFIG_DIRS/nvim/sysinit.vim`​（默认是 `/etc/xdg/nvim/sysinit.vim`​），如果不存在，则会载入 `/usr/share/nvim/sysinit.vim`，后者不建议由用户编辑。同时，Neovim 的配置文件支持 Lua 语法。
+使用 Vim 的分支 [Neovim](https://neovim.io/)，与 Vim 不同，Neovim 的用户配置文件位于 `$XDG_CONFIG_HOME/nvim/`（默认是 `~/.config/nvim/`），全局配置文件（默认不存在）位于 `$XDG_CONFIG_DIRS/nvim/sysinit.vim`（默认是 `/etc/xdg/nvim/sysinit.vim`），如果不存在，则会载入 `/usr/share/nvim/sysinit.vim`，后者不建议由用户编辑。同时，Neovim 的配置文件支持 Lua 语法。
 
-Windows下配置文件位于`C:\Users\Bill\AppData\Local\nvim\init.vim`。
+Windows 下配置文件位于 `C:\Users\Bill\AppData\Local\nvim\init.vim`。
 
-## 将 vim 链接到 nvim
+## 1 将 vim 链接到 nvim
 
-在 Arch Linux 下，可以使用包[AUR (zh_CN) - neovim-symlinks](https://aur.archlinux.org/packages/neovim-symlinks)来办到。
+在 Arch Linux 下，可以使用包 [AUR (zh_CN) - neovim-symlinks](https://aur.archlinux.org/packages/neovim-symlinks) 来办到。
 
-在 Linux下，使用软链接：
+在 Linux 下，使用软链接：
 
 ```zsh
 mkdir -p ~/.local/bin  # 创建用户级别的 bin 目录
 ln -s $(which nvim) ~/.local/bin/vim  # 建立软链接
 ```
 
-随后将自定义目录添加到 `PATH`​ 开头，在 `~/.bashrc`​（或 `~/.zshrc`）中添加：
+随后将自定义目录添加到 `PATH` 开头，在 `~/.bashrc`（或 `~/.zshrc`）中添加：
 
 ```bash
 export PATH="$HOME/.local/bin:$PATH"
@@ -37,15 +37,15 @@ export PATH="$HOME/.local/bin:$PATH"
 Set-Alias -Name vim -Value nvim
 ```
 
-使用`echo $PROFILE`命令找到配置文件位置，随后在对应的目录下建立对应的配置文件，并在其中写入：
+使用 `echo $PROFILE` 命令找到配置文件位置，随后在对应的目录下建立对应的配置文件，并在其中写入：
 
 ```ps
 function vim {nvim}
 ```
 
-## 配置文件及插件管理器
+## 2 配置文件及插件管理器
 
-使用插件管理器[folke/lazy.nvim](https://github.com/folke/lazy.nvim)，通过直接编辑 Neovim 的配置文件即可引入。同时，有一个名为 [LazyVim/LazyVim](https://github.com/LazyVim/LazyVim) 的项目，提供了开箱即用的配置模板，功能强大，但是对于我而言不需要这么多功能，所以只选择了部分插件。Lazy nvim 直接通过编辑配置文件的方式引入，整个配置文件夹结构为：
+使用插件管理器 [folke/lazy.nvim](https://github.com/folke/lazy.nvim)，通过直接编辑 Neovim 的配置文件即可引入。同时，有一个名为 [LazyVim/LazyVim](https://github.com/LazyVim/LazyVim) 的项目，提供了开箱即用的配置模板，功能强大，但是对于我而言不需要这么多功能，所以只选择了部分插件。Lazy nvim 直接通过编辑配置文件的方式引入，整个配置文件夹结构为：
 
 ```bash
 nvim
@@ -60,13 +60,13 @@ nvim
 
 具体的配置文件，可以参考我的 dotfile 仓库：[dotfiles/dotfiles/nvim at master · CMBill/dotfiles](https://github.com/CMBill/dotfiles/tree/master/dotfiles/nvim)
 
-要安装 Lazy nvim，首先在`~/.config/nvim/init.lua`文件中引入：
+要安装 Lazy nvim，首先在 `~/.config/nvim/init.lua` 文件中引入：
 
 ```lua
 require("config.lazy")
 ```
 
-随后在配置文件夹下新建`lua/config`​文件夹，在`~/.config/nvim/lua/config/lazy.lua`中填写lazy.nvim启动文件：
+随后在配置文件夹下新建 `lua/config` 文件夹，在 `~/.config/nvim/lua/config/lazy.lua` 中填写 lazy.nvim 启动文件：
 
 ```lua
 -- Bootstrap lazy.nvim
@@ -106,30 +106,30 @@ require("lazy").setup({
 })
 ```
 
-要安装、配置插件，则在`lua`​文件夹里新建`plugin`​文件夹，在其中的`lua`文件会被识别为插件配置。这里是我的插件配置：
+要安装、配置插件，则在 `lua` 文件夹里新建 `plugin` 文件夹，在其中的 `lua` 文件会被识别为插件配置。这里是我的插件配置：
 
 1. **主题：catppuccin**  
-   配置首先加载了 `catppuccin/nvim`​，并设置为高优先级（1000），确保界面尽早渲染。配色选用柔和的 `mocha` 风格，加载后直接应用，为整个编辑器定下温暖、护眼的基调。
+   配置首先加载了 `catppuccin/nvim`，并设置为高优先级（1000），确保界面尽早渲染。配色选用柔和的 `mocha` 风格，加载后直接应用，为整个编辑器定下温暖、护眼的基调。
 
 2. **功能中心：snacks.nvim**  
-   ​`folke/snacks.nvim` 是本配置的核心，它集成了十几项日常高频功能，且默认全部开启：大文件优化、仪表盘、文件浏览器、图片预览、缩进线、输入增强、通知系统、智能选择器、快速文件跳转、作用域高亮、平滑滚动、状态列和单词跳转等。通知超时设为 3 秒。
+   `folke/snacks.nvim` 是本配置的核心，它集成了十几项日常高频功能，且默认全部开启：大文件优化、仪表盘、文件浏览器、图片预览、缩进线、输入增强、通知系统、智能选择器、快速文件跳转、作用域高亮、平滑滚动、状态列和单词跳转等。通知超时设为 3 秒。
 
    快捷键设计非常有条理，几乎覆盖所有场景：
 
-   - **查找与导航**：`<leader>ff`​ 查找文件，`<leader>fg`​ 查找 Git 文件，`<leader>/`​ 全文搜索，`<leader>fb`​ 切换缓冲区，`<leader>fp`​ 查找项目，`<leader>fr` 最近文件。
-   - **Git 操作**：直接使用 `gs`​/`gl`​/`gd`​ 等组合查看状态、日志、差异、暂存等，`<leader>gg`​ 打开 Lazygit，`<leader>gB` 在浏览器中打开远程仓库。
-   - **LSP 集成**：`gd`​ 跳转定义，`gr`​ 查看引用，`gy`​ 类型定义，`<leader>ss` 工作区符号等，完全取代原生 LSP 浮窗，界面更统一。
-   - **实用工具**：`<leader>e`​ 打开文件浏览器，`<leader>z`​ 进入禅模式，`<leader>.`​ 打开草稿缓冲区，`<c-/>`​ 切换终端，`<leader>bd`​ 删除缓冲区，`<leader>cR` 重命名文件。
+   - **查找与导航**：`<leader>ff` 查找文件，`<leader>fg` 查找 Git 文件，`<leader>/` 全文搜索，`<leader>fb` 切换缓冲区，`<leader>fp` 查找项目，`<leader>fr` 最近文件。
+   - **Git 操作**：直接使用 `gs`/`gl`/`gd` 等组合查看状态、日志、差异、暂存等，`<leader>gg` 打开 Lazygit，`<leader>gB` 在浏览器中打开远程仓库。
+   - **LSP 集成**：`gd` 跳转定义，`gr` 查看引用，`gy` 类型定义，`<leader>ss` 工作区符号等，完全取代原生 LSP 浮窗，界面更统一。
+   - **实用工具**：`<leader>e` 打开文件浏览器，`<leader>z` 进入禅模式，`<leader>.` 打开草稿缓冲区，`<c-/>` 切换终端，`<leader>bd` 删除缓冲区，`<leader>cR` 重命名文件。
 
-   ​`init`​ 函数中还准备了调试辅助（`dd`​、`bt`​）和一系列 `toggle`​ 映射，比如 `<leader>us`​ 切换拼写检查、`<leader>ul`​ 切换行号、`<leader>ud` 切换诊断显示等，一键控制编辑器状态，非常方便。
+   `init` 函数中还准备了调试辅助（`dd`、`bt`）和一系列 `toggle` 映射，比如 `<leader>us` 切换拼写检查、`<leader>ul` 切换行号、`<leader>ud` 切换诊断显示等，一键控制编辑器状态，非常方便。
 3. **按键提示：which-key.nvim**  
-   配置了 `folke/which-key.nvim`​，采用 `helix`​ 风格预设，在按下 `<leader>`​ 后自动弹出可用的快捷键菜单。额外添加了 `<leader>?` 手动显示当前缓冲区专属快捷键，帮助记忆不常用的组合键。
+   配置了 `folke/which-key.nvim`，采用 `helix` 风格预设，在按下 `<leader>` 后自动弹出可用的快捷键菜单。额外添加了 `<leader>?` 手动显示当前缓冲区专属快捷键，帮助记忆不常用的组合键。
 4. **状态栏：lualine.nvim**  
-   ​`nvim-lualine/lualine.nvim`​ 在 `VeryLazy`​ 时加载，直接使用 `catppuccin-mocha` 主题，使状态栏与整体配色完美融合，无需额外调校。
+   `nvim-lualine/lualine.nvim` 在 `VeryLazy` 时加载，直接使用 `catppuccin-mocha` 主题，使状态栏与整体配色完美融合，无需额外调校。
 5. **图标与配对：mini.nvim 生态**  
-   选取了两个轻量的 mini 插件：`mini.icons`​ 为各类文件类型提供图标支持，按需延迟加载；`mini.pairs` 在进入插入模式时自动配对括号、引号等，保持编辑体验流畅。
+   选取了两个轻量的 mini 插件：`mini.icons` 为各类文件类型提供图标支持，按需延迟加载；`mini.pairs` 在进入插入模式时自动配对括号、引号等，保持编辑体验流畅。
 6. **Git 装饰：gitsigns.nvim**  
-   ​`lewis6991/gitsigns.nvim`​ 在打开文件时即生效，用自定义符号（如 `┃`​ 表示新增或修改，`_` 表示删除）在左侧符号列标示变更状态，且区分暂存与未暂存的符号。配置还启用了当前行 blame 预览（行尾显示作者和时间），延迟 1 秒出现，同时限制超长文件禁用，兼顾性能与信息展示。
+   `lewis6991/gitsigns.nvim` 在打开文件时即生效，用自定义符号（如 `┃` 表示新增或修改，`_` 表示删除）在左侧符号列标示变更状态，且区分暂存与未暂存的符号。配置还启用了当前行 blame 预览（行尾显示作者和时间），延迟 1 秒出现，同时限制超长文件禁用，兼顾性能与信息展示。
 
 ```lua
 return {

@@ -8,12 +8,12 @@ slug: opencode-usage-guide
 draft: false
 ---
 
-## 安装
+## 1 安装
 
 > [!TIP]
-> Windows 安装直接跳到 [Windows 安装 Node](#windows-安装-node) 即可。
+> Windows 安装直接跳到 [Windows 安装 Node](#122-windows-安装-node) 即可。
 
-### 安装脚本
+### 1.1 安装脚本
 
 对于 Linux 和 macOS 系统，可以使用安装脚本直接安装。
 
@@ -23,11 +23,11 @@ curl -fsSL https://opencode.ai/install | bash
 
 如果网络下载速度过慢或失败，以及 Windows 用户，可以使用 NPM 安装。
 
-### 使用 NPM 安装
+### 1.2 使用 NPM 安装
 
-首先确保安装有 Node 环境，参考[下载 Node.js](https://nodejs.org/zh-cn/download)。
+首先确保安装有 Node 环境，参考 [下载 Node.js](https://nodejs.org/zh-cn/download)。
 
-#### Linux 安装 Node
+#### 1.2.1 Linux 安装 Node
 
 对于 Ubuntu，可以使用以下命令安装：
 
@@ -47,11 +47,11 @@ node -v # Should print "v24.16.0".
 npm -v # Should print "11.13.0".
 ```
 
-#### Windows 安装 Node
+#### 1.2.2 Windows 安装 Node
 
 对于 Windows，在[下载 Node.js](https://nodejs.org/zh-cn/download)页面下方找到“或者获得适用于 Windows x64 平台的 Node.js 构建”，点击下载 Windows 安装程序 (.msi) 安装即可。
 
-#### 安装 OpenCode
+#### 1.2.3 安装 OpenCode
 
 Node.js 安装完成后（自带 npm），在终端中执行：
 
@@ -61,13 +61,13 @@ npm install -g opencode-ai
 
 安装完成后，在任意终端输入 `opencode` 命令即可启动 TUI 界面的 OpenCode，同时会将当前所在文件夹作为工作目录。
 
-### 添加供应商
+### 1.3 添加供应商
 
 启动 OpenCode 后，按下 `Ctrl+P` 可以打开命令菜单，在其中找到 **Connect provider**，输入供应商名称（如 DeepSeek）即可搜索，选中后输入对应的 API Key 即可。
 
 OpenCode 官方也提供了名为 OpenCode Zen 和 OpenCode Go 的大模型服务，并提供部分免费额度，可参考[OpenCode Zen 定价](https://opencode.ai/docs/zh-cn/zen/#%E5%AE%9A%E4%BB%B7)。注册账号后将 API Key 添加到 OpenCode 中即可使用。
 
-## 桌面应用
+## 2 桌面应用
 
 OpenCode 官方提供了桌面应用，但目前功能较少，不推荐使用。推荐使用第三方的 [OpenChamber](https://openchamber.dev/zh/)。
 
