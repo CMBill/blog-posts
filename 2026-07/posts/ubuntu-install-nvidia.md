@@ -48,7 +48,7 @@ sudo apt-get install -y nvidia-open # 会安装最新版本的显卡驱动
 ```
 
 > [!TIP]
-> Ubuntu 22.04系统安装时可能会编译报错，是由于不支持系统默认安装的GCC 11版本，手动安装 GCC 12 即可。
+> Ubuntu 22.04 系统安装时可能会编译报错，是由于不支持系统默认安装的 GCC 11 版本，手动安装 GCC 12 即可。
 >
 > ```bash
 > sudo apt install gcc-12
@@ -81,7 +81,7 @@ export LIBRARY_PATH=$LIBRARY_PATH:$CUDA_HOME/lib64
 
 ## 4 安装 cuDNN
 
-最新版本的 cuDNN 可以参考 [cuDNN Downloads](https://developer.nvidia.com/cudnn-downloads)，对于Ubuntu 20.04 最高支持到 cuDNN 9.10.2，因此参考[cuDNN 9.10.2 Downloads](https://developer.nvidia.com/cudnn-9-10-2-download-archive?target_os=Linux&amp;target_arch=x86_64&amp;Distribution=Ubuntu&amp;target_version=20.04&amp;target_type=deb_network)。在前面已经添加好存储库后直接运行：
+最新版本的 cuDNN 可以参考 [cuDNN Downloads](https://developer.nvidia.com/cudnn-downloads)，对于 Ubuntu 20.04 最高支持到 cuDNN 9.10.2，因此参考 [cuDNN 9.10.2 Downloads](https://developer.nvidia.com/cudnn-9-10-2-download-archive?target_os=Linux&amp;target_arch=x86_64&amp;Distribution=Ubuntu&amp;target_version=20.04&amp;target_type=deb_network)。在前面已经添加好存储库后直接运行：
 
 ```bash
 # 对于 CUDA 12，执行
